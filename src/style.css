@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
-#app{
+#app {
   height: 100vh;
 }
 
-.encabezado{
+.encabezado {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,16 +20,17 @@
   background-color: rgb(29, 29, 29);
 }
 
-.logo{
-  margin-left: 20px;
+.logo {
+  margin-left: 30px;
   height: 40px;
+  cursor: pointer;
 }
 
-.nav{
+.nav {
   height: 100%;
 }
 
-.lista{
+.lista {
   list-style: none;
   display: flex;
   align-items: center;
@@ -38,14 +39,14 @@
   height: 100%;
 }
 
-.lista__item{
+.lista__item {
   width: calc(500px / 3);
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.lista__link{
+.lista__link {
   text-decoration: none;
   color: #fff;
   height: 100%;
@@ -54,17 +55,34 @@
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  border-radius: 12px;
+  transition: 0.3s;
   /* padding: 0 30px; */
 }
 
-.lista__link
+.lista__link:hover {
+  background-color: #444444;
+  box-shadow: 0 0 60px 0px #6366f1 inset;
+}
 
-.logo-login{
+.contenedor-logins {
+  margin-right: 20px;
+}
+
+.logo-login {
   font-size: 30px;
   padding: 5px;
   /* color: #fff; */
-  margin: 0 10px 0 0;
+  margin-right: 15px;
   background-color: #fff;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.logo-login:hover {
+  background-color: #474747;
+  border: 1px solid #333333;
+  box-shadow: 0 0 10px 6px #c084fc;
+  color: #fcd34d;
 }
