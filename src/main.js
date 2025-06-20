@@ -1,9 +1,10 @@
 //Importaciones
 import './style.css';
 import 'remixicon/fonts/remixicon.css';
-import * as categoryController from './views/category/categoryController.js';
-import * as productController from './views/product/productController.js';
-import * as homeController from './views/home/homeController.js';
+import * as CategoryController from './views/category/CategoryController';
+import * as ProductController from './views/product/ProductController';
+import * as HomeController from './views/home/homeController';
+import { validarFormulario } from './views/category/validateForm';
 
 //Variables
 const main = document.querySelector('.main');
@@ -12,23 +13,28 @@ const rutas = [
   {
     name: "category",
     path: "/src/views/category/index.html",
-    src: categoryController
+    src: CategoryController.category
   },
   {
     name: "product",
     path: "/src/views/product/index.html",
-    src: productController
+    src: ProductController.product
   },
   {
     name: "home",
     path: "/src/views/home/index.html",
-    src: homeController
+    src: HomeController.home
+  },
+  {
+    name: "createCategory",
+    path: "/src/views/category/createCategory.html",
+    src: validarFormulario
   }
 ];
 
 //Funciones
-const get = async(folder) => {
-  const response = await fetch(`src/views/${folder}/index.html`);
+const get = async(path) => {
+  const response = await fetch(path);
   const data = await response.text();
   return data;
 }
@@ -37,10 +43,11 @@ const enrutador = async (locationHash) => {
   const hash = locationHash.slice(1);
 
   const vista = rutas.find(({ name }) => name == hash);
-  console.log(vista);
-
-  main.innerHTML = await get(vista.name);
+  // console.log(vista);
+  
+  main.innerHTML = await get(vista.path);
   // window.location.hash = vista.name + vista.path;
+  vista.src();
 }
 
 //Eventos
