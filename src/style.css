@@ -8,7 +8,7 @@
 }
 
 body {
-  background: linear-gradient(120deg, #000000, #626262, #ffffff);
+  background: linear-gradient(330deg, #000000, #626262, #ffffff);
 }
 
 #app {
@@ -24,17 +24,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* width: 100%; */
   margin: 20px 30px;
   height: 60px;
-  background-color: rgba(29, 29, 29, 0.4);
-  /* border-bottom: 1px solid #646464; */
   border-radius: 10px;
-
-  backdrop-filter: blur(8px); /* Aquí está el desenfoque */
-  -webkit-backdrop-filter: blur(8px); /* Compatibilidad Safari */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Le da profundidad */
-  position: relative; /* Necesario para superposición */
+  
+  background-color: rgba(29, 29, 29, 0.4);
+  backdrop-filter: blur(8px); /*desenfoque */
+  /* -webkit-backdrop-filter: blur(8px);  */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
   z-index: 1;
 }
 
@@ -74,8 +72,9 @@ body {
   justify-content: center;
   font-size: 18px;
   border-radius: 12px;
-  transition: 0.4s;
+  /* transition: 0.4s; */
   /* padding: 0 30px; */
+  transition: 1s;
 }
 
 .lista__link:hover {
@@ -91,8 +90,10 @@ body {
   background-size: 300%; /* Aumenta el tamaño del fondo para que se note más al moverse */
   background-position: center; /* Centra el fondo degradado */
 
-  -webkit-background-clip: text; /* Solo muestra el fondo dentro del texto (para WebKit/Safari) */
-  -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente (para ver el fondo detrás) */
+  -webkit-background-clip: text; 
+  /* Solo muestra el fondo dentro del texto (para WebKit/Safari) */
+  -webkit-text-fill-color: transparent; 
+  /* Hace que el texto sea transparente (para ver el fondo detrás) */
 
   background-clip: text; /* Versión estándar del background-clip */
   color: transparent; /* Oculta el color de texto normal, mostrando solo el fondo degradado */
@@ -140,6 +141,11 @@ body {
   background-color: #ffffff;
   box-shadow: 0 0 4px 0px #ffffff, 0 0 100px 0 #fff0d0 inset,
     0 0 20px 0 #000000 inset;
+
+  background-color: rgba(255, 255, 255, 0.639);
+  backdrop-filter: blur(100px); /*desenfoque */
+  /* -webkit-backdrop-filter: blur(8px);  */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .title {

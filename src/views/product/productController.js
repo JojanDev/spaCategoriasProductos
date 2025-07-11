@@ -10,7 +10,7 @@ export const product = async () => {
     const body = document.createElement('p');
     const title = document.createElement('h3');
 
-    card.classList.add('card');
+    card.classList.add('card-producto');
     user.classList.add('userId');
     id.classList.add('id');
     body.classList.add('body');
